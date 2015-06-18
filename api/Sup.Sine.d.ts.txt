@@ -1,5 +1,5 @@
 declare module Sup {
-  class Sine extends ActorComponent {
-    constructor( actor: Sup.Actor, options?: any );
-  }
+	class Sine extends ActorComponent {
+		constructor( actor: Sup.Actor, options?: any );
+	}
 }
