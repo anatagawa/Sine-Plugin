@@ -1,0 +1,14 @@
+module Sup {
+  export class Sine extends ActorComponent {
+    constructor( actor, options ) {
+      super( actor );
+      this.__inner = new SupEngine.componentClasses.Sine( actor.__inner, options );
+      this.__inner.__outer = this;
+      this.actor.sine = this;
+    }
+    destroy() {
+      this.actor.sine = null;
+      super.destroy();
+    }
+  }
+}
